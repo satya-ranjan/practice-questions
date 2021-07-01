@@ -47,11 +47,14 @@ Input: 124
 
 '''
 def check(num):
-    temp = 0
-    if num != temp:
-        N = str(num)[::-1]
-        temp = num + int(N)
-    print(temp)
-num = int(input(" Enter the number "))
+    N = num[::-1]
+    sum = int(num) + int(N)
+
+    if str(sum) == str(sum)[::-1]:
+        print(sum)
+    else:
+        return check(str(sum))
+        
+num = input(" Enter the number ")
 check(num)
 
